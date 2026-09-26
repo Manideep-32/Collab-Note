@@ -5,7 +5,7 @@ const User = require('../models/User')
 const { ROLES } = require('../util/constants')
 
 const makeAvatarUrl = (seed) => {
-  const safeSeed = encodeURIComponent(String(seed || 'nexus-user').trim() || 'nexus-user')
+  const safeSeed = encodeURIComponent(String(seed || 'collab-user').trim() || 'collab-user')
   return `https://api.dicebear.com/7.x/identicon/svg?seed=${safeSeed}`
 }
 

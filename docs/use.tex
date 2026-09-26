@@ -1,0 +1,318 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+% --- WINDOWS FONT SETTINGS (Times New Roman) ---
+\usepackage{mathptmx} 
+
+% Page Geometry
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Use Cases for NexusNotes}
+\lhead{Version 1.0}
+\rfoot{Page \thepage}
+
+% Custom Column Type for Text Wrapping
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{\textbf{Use Cases} \\ for \\ \textbf{NexusNotes}}
+
+% --- AUTHOR SECTION ---
+\author{
+    \textbf{Project Team: Code Club}\\[0.5cm]
+    Ramasani Adi Pranav -- 24CSB0A57\\
+    Syed Mohammad Sami -- 24CSB0A77\\
+    Janapala Harsha Vardhan Reddy -- 24CSB0A28\\[2cm]
+}
+\date{February 13, 2026}
+
+\begin{document}
+
+% --- PAGE 1: TITLE PAGE ---
+\maketitle
+\thispagestyle{empty}
+\begin{center}
+    \vspace{1cm}
+    \textbf{Version 1.0 approved}
+    
+    \vspace{4cm}
+    Copyright \copyright\ 2026 by Code Club. All Rights Reserved.
+\end{center}
+\newpage
+
+% --- PAGE 2: REVISION HISTORY ---
+\section*{Revision History}
+\begin{longtable}{|L{4cm}|L{3cm}|L{5cm}|L{3cm}|}
+\hline
+\textbf{Name} & \textbf{Date} & \textbf{Reason For Changes} & \textbf{Version} \\
+\hline
+Code Club & 02/13/2026 & Initial draft based on Vision Document & 1.0 draft 1 \\
+\hline
+
+\end{longtable}
+\vspace{1cm}
+\noindent Copyright \copyright\ 2026 by Code Club. All Rights Reserved.
+\newpage
+
+% --- PAGE 3: LIST OF USE CASES ---
+\section{Use Case Summary}
+ The user classes identified the following use cases and primary actors for the NexusNotes Platform:
+
+\begin{longtable}{|L{4cm}|L{11cm}|}
+\hline
+\textbf{Primary Actor} & \textbf{Use Cases} \\
+\hline
+\textbf{Student} & 
+1.  Upload Academic Resource  \newline
+2.  Search and Download Resource \newline
+3.  View Tech-Trend Feed \newline
+4.  Rate and Review Resource  \\
+\hline
+\textbf{Administrator} & 
+5.  User Management \newline
+6.  Content Moderation  \newline
+7.  System Monitoring \\
+\hline
+\end{longtable}
+\newpage
+
+% --- PAGE 4: DETAILED USE CASES ---
+\section{Detailed Use Cases}
+
+% --- UC-01 ---
+\subsection*{Use Case 1: Upload Academic Resource}
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\hline
+\textbf{Use Case ID:} & UC-01 \\
+\hline
+\textbf{Use Case Name:} & Upload Academic Resource \\
+\hline
+\textbf{Created By:} & Code Club \\
+\textbf{Date Created:} &February 13, 2026 \\
+\hline
+\textbf{Actors:} & Student \\
+\hline
+ \textbf{Description:} & A student uploads a digital academic resource (lecture notes, project report, or question paper) to a specific subject repository for sharing with peers. \\
+\hline
+\textbf{Preconditions:} & 
+1. Student is logged into NexusNotes. \newline
+2. Student has valid "Contributor" permissions. \\
+\hline
+\textbf{Postconditions:} & 
+1. Resource is stored in the database. \newline
+2.  Resource is indexed for search and categorization. \\
+\hline
+\textbf{Normal Flow:} & 
+\textbf{1.0 Upload Resource} \newline
+1. Student navigates to the "Contribute" section. \newline
+2. System displays the upload form. \newline
+3. Student selects the Category (Lecture Notes, Question Bank, Project, Emerging Tech). \newline
+4. Student uploads the file (PDF, DOCX, PPT). \newline
+5. Student adds metadata (Subject, Topic, Tags). \newline
+6. Student submits the resource. \newline
+7. System validates file format and size. \newline
+8. System confirms successful upload and publishes content to the repository. \\
+\hline
+\textbf{Alternative Flows:} & 
+\textbf{UC-01.AC.1 Bulk Upload} \newline
+1. Student selects "Bulk Upload" at step 1. \newline
+2. Student drags and drops multiple files. \newline
+3. System applies common metadata tags to all files. \\
+\hline
+\textbf{Exceptions:} & 
+\textbf{UC-01.EX.1 Invalid File Format} \newline
+1. System detects unsupported file type. \newline
+2. System displays error message and requests valid format. \\
+\hline
+ \textbf{Priority:} & High  \\
+\hline
+\textbf{Business Rules:} & Maximum file size is 50MB per resource. \\
+\hline
+\end{longtable}
+\newpage
+
+% --- UC-02 ---
+\subsection*{Use Case 2: Search and Download Resource}
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\hline
+\textbf{Use Case ID:} & UC-02 \\
+\hline
+\textbf{Use Case Name:} & Search and Download Resource \\
+\hline
+\textbf{Created By:} & Code Club \\
+\textbf{Date Created:} &February 13, 2026 \\
+\hline
+\textbf{Actors:} & Student \\
+\hline
+ \textbf{Description:} & Students search for specific academic materials using keywords, filters (Subject, Module), or tags, and download them for study. \\
+\hline
+\textbf{Preconditions:} & Student is logged into NexusNotes. \\
+\hline
+\textbf{Postconditions:} & File is downloaded to the student's local device. \\
+\hline
+\textbf{Normal Flow:} & 
+\textbf{2.0 Standard Search} \newline
+1. Student enters keywords in the global search bar. \newline
+2. System displays results ranked by relevance and user rating. \newline
+3. Student applies filters (e.g., "Computer Science", "Semester 1"). \newline
+4. System updates result list. \newline
+5. Student clicks on a resource to view details. \newline
+6. Student clicks "Download". \newline
+7. System increments the download count. \\
+\hline
+\textbf{Alternative Flows:} & 
+\textbf{UC-02.AC.1 Browse by Repository} \newline
+1. Student navigates via menu: Repository $\rightarrow$ Year $\rightarrow$ Subject. \newline
+2.  System lists all resources in that category. \\
+\hline
+\textbf{Exceptions:} & 
+\textbf{UC-02.EX.1 No Results} \newline
+1. System finds no matches. \newline
+2. System suggests related topics or broader terms. \\
+\hline
+ \textbf{Priority:} & Medium  \\
+\hline
+\end{longtable}
+\newpage
+
+% --- UC-03 ---
+\subsection*{Use Case 3: View Tech-Trend Feed}
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\hline
+\textbf{Use Case ID:} & UC-03 \\
+\hline
+\textbf{Use Case Name:} & View Tech-Trend Feed \\
+\hline
+\textbf{Created By:} & Code Club \\
+\textbf{Date Created:} &February 13, 2026 \\
+\hline
+\textbf{Actors:} & Student \\
+\hline
+ \textbf{Description:} & Students access a real-time feed of technological advancements relevant to their academic domains to stay updated. \\
+\hline
+\textbf{Preconditions:} & Internet connection is active. \\
+\hline
+\textbf{Postconditions:} & Student views latest articles or news snippets. \\
+\hline
+\textbf{Normal Flow:} & 
+\textbf{3.0 View Feed} \newline
+1. Student clicks on "Tech-Trend Feed" on the dashboard. \newline
+2. System fetches real-time data from external tech APIs/sources. \newline
+3. System displays curated list of trending technologies. \newline
+4. Student clicks on an article to read more. \\
+\hline
+ \textbf{Priority:} & Medium  \\
+\hline
+\end{longtable}
+\newpage
+
+% --- UC-04 ---
+\subsection*{Use Case 4: Rate and Review Resource}
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\hline
+\textbf{Use Case ID:} & UC-04 \\
+\hline
+\textbf{Use Case Name:} & Rate and Review Resource \\
+\hline
+\textbf{Created By:} & Code Club \\
+\textbf{Date Created:} &February 13, 2026 \\
+\hline
+\textbf{Actors:} & Student \\
+\hline
+ \textbf{Description:} & Students provide feedback and ratings on shared resources, helping to rank high-quality content. \\
+\hline
+\textbf{Preconditions:} & Student has downloaded or viewed the resource. \\
+\hline
+\textbf{Postconditions:} & Resource rating is updated in the database. \\
+\hline
+\textbf{Normal Flow:} & 
+\textbf{4.0 Submit Review} \newline
+1. Student views resource details. \newline
+2. Student selects a star rating (1-5). \newline
+3. Student enters optional text comments. \newline
+4. Student submits review. \newline
+5. System recalculates average rating and displays new review. \\
+\hline
+ \textbf{Priority:} & Low  \\
+\hline
+\end{longtable}
+\newpage
+
+% --- UC-05 (ADMIN) ---
+\subsection*{Use Case 5: User Management (Admin)}
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\hline
+\textbf{Use Case ID:} & UC-05 \\
+\hline
+\textbf{Use Case Name:} & User Management \\
+\hline
+\textbf{Created By:} & Code Club \\
+\textbf{Date Created:} &February 13, 2026 \\
+\hline
+\textbf{Actors:} & Administrator \\
+\hline
+ \textbf{Description:} & Administrator controls user roles, permissions, and access to the system. \\
+\hline
+\textbf{Preconditions:} & Admin is logged in with administrative privileges. \\
+\hline
+\textbf{Postconditions:} & User account is updated (created, suspended, or role-changed). \\
+\hline
+\textbf{Normal Flow:} & 
+\textbf{5.0 Manage Users} \newline
+1. Admin navigates to "User Management" console. \newline
+2. Admin searches for a specific student or user. \newline
+3. Admin selects user account. \newline
+4. Admin updates permissions (e.g., suspend abusive user, promote to moderator). \newline
+5. System saves changes and notifies user if necessary. \\
+\hline
+ \textbf{Priority:} & High \\
+\hline
+\end{longtable}
+\newpage
+
+% --- UC-06 (ADMIN) ---
+\subsection*{Use Case 6: Content Moderation (Admin)}
+\begin{longtable}{|p{4cm}|p{11cm}|}
+\hline
+\textbf{Use Case ID:} & UC-06 \\
+\hline
+\textbf{Use Case Name:} & Content Moderation \\
+\hline
+\textbf{Created By:} & Code Club \\
+\textbf{Date Created:} & February 13, 2026 \\
+\hline
+\textbf{Actors:} & Administrator \\
+\hline
+ \textbf{Description:} & Administrator monitors uploaded content and removes inappropriate, duplicate, or incorrect materials. \\
+\hline
+\textbf{Preconditions:} & Content has been flagged or requires review. \\
+\hline
+\textbf{Postconditions:} & Content is removed or marked as safe. \\
+\hline
+\textbf{Normal Flow:} & 
+\textbf{6.0 Moderation} \newline
+1. Admin accesses "Moderation Queue" or views reported content. \newline
+2. System displays flagged resources. \newline
+3. Admin reviews content against community guidelines. \newline
+4. Admin deletes content or dismisses report. \newline
+5. System updates content visibility. \\
+\hline
+ \textbf{Priority:} & High  \\
+\hline
+\end{longtable}
+
+\end{document}

@@ -1,0 +1,297 @@
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage{times}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% Title Page Information
+\title{\textbf{Software Requirements Specification} \\ for \\ \textbf{NexusNotes}}
+\author{
+    \textbf{Project Team: Code Club} \\
+    Ramasani Adi Pranav - 24CSB0A57 \\
+    Syed Mohammad Sami - 24CSB0A77 \\
+    Janapala Harsha Vardhan Reddy - 24CSB0A28
+}
+\date{February 20, 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\subsection{Purpose}
+The purpose of this document is to define the high-level objectives, scope, and strategic direction of the Nexus Notes platform.
+It provides a comprehensive overview of the system's goals, target users, stakeholders, and core functionalities.
+This document serves as a foundational reference for developers, academic stakeholders, and institutional authorities by clearly outlining the problem domain and the proposed solution.
+It also ensures a shared understanding of the system vision among all participants involved in the project lifecycle.
+
+\subsection{Document Conventions}
+This document was created based on the IEEE template for System Requirement Specification Documents.
+The requirements are prioritized as High, Medium, or Low based on their critical impact on the system's core functionalities.
+
+\subsection{Intended Audience}
+
+\begin{itemize}
+    \item \textbf{Students:} Access, contribute, and utilize academic resources.
+    \item \textbf{Faculty Members:} Verify and validate academic content.
+    \item \textbf{Nexus Notes Administrators:} Manage platform operations, user roles, and content governance.
+    \item \textbf{Developers:} Design, develop, and maintain the system.
+    \item \textbf{Academic Coordinators:} Align content with curriculum requirements.
+\end{itemize}
+
+\subsection{Product Scope}
+The fragmentation of academic resources across multiple platforms creates significant inefficiencies for students seeking reliable study materials, often resulting in redundant efforts and information silos.
+Nexus Notes is a web-based centralized academic resource management system designed for educational institutions to resolve this issue.
+The platform aims to unify fragmented academic resources into a structured digital repository organized subject-wise and module-wise.
+The proposed platform assigns dedicated digital repositories to every curriculum subject, segmented into specialized subsections for lecture notes, critical question banks, capstone project archives, and emerging technology trends.
+The system integrates dynamic collaborative features, including a contribution mechanism for peer-to-peer resource sharing, a faculty verification layer to ensure content accuracy, and a categorization logic that prioritizes high-quality content based on user engagement.
+Furthermore, to bridge the gap between theoretical coursework and industry demands, the system incorporates a real-time Tech-Trend feed that aggregates relevant technological advancements for each specific domain.
+The scope of the current system does not include full-fledged learning management functionalities such as automated grading systems, examination modules, or institutional administrative processes.
+
+\subsection{References}
+\begin{itemize}
+    \item Vision Document, Nexus Notes, Centralized Academic Resource Platform, Version 1.0, January 30, 2026.
+    \item Use Cases for Nexus Notes, Version 1.0, February 13, 2026.
+\end{itemize}
+
+\section{Overall Description}
+
+\subsection{Product Perspective}
+Nexus Notes is designed as a centralized academic knowledge platform that integrates students, faculty, and academic resources into a unified digital ecosystem.
+The system acts as a bridge between fragmented academic materials and structured learning processes.
+It complements existing institutional systems by providing an organized repository for academic content, collaboration features, and real-time technology updates.
+Nexus Notes operates as a web-based platform accessible to all authorized users within an academic institution.
+
+\subsection{Product Functions}
+The core capabilities of Nexus Notes include:
+\begin{itemize}
+    \item \textbf{Centralized Repository:} Provides subject-wise digital repositories for academic resources.
+    \item \textbf{Collaborative Sharing:} Enables students and faculty to contribute and share content.
+    \item \textbf{Content Verification:} Allows faculty members to validate and approve academic materials.
+    \item \textbf{Intelligent Categorization:} Organizes content based on relevance and usage.
+    \item \textbf{Advanced Search:} Supports fast and accurate retrieval of academic resources.
+    \item \textbf{Tech-Trend Integration:} Displays real-time technology trends related to academic domains.
+\end{itemize}
+
+\subsection{User Classes and Characteristics}
+
+\begin{itemize}
+    \item \textbf{Primary Users:} Students who access and share academic resources. Students require easy access to reliable and structured academic resources to enhance learning efficiency.
+
+    \item \textbf{Secondary Users:} Faculty members who review and verify content. Faculty members focus on ensuring content accuracy and academic relevance.
+
+    \item \textbf{Administrative Users:} Nexus Notes administrators responsible for managing the platform, moderating content, and controlling user permissions.
+
+    \item \textbf{Contributors:} Users who upload and curate academic content.
+\end{itemize}
+
+\subsection{Operating Environment}
+Users interact with Nexus Notes through web browsers on devices such as laptops, tablets, and smartphones.
+The platform is accessed in various environments including classrooms, libraries, hostels, homes, and laboratories.
+The system supports collaborative academic activities with continuous updates of digital content.
+
+\subsection{Design and Implementation Constraints}
+The Nexus Notes platform is subject to technical limitations such as server capacity, storage availability, network bandwidth, and system scalability.
+The performance of the system depends on reliable internet connectivity and compatible hardware devices.
+The system must ensure data security, user privacy, and protection of academic content.
+Compliance with institutional data policies and ethical standards is required.
+
+\subsection{User Documentation}
+\begin{itemize}
+    \item \textbf{User Manual:} A user manual is provided to guide students, faculty, and administrators in using the Nexus Notes platform.
+    \item \textbf{Administrator Guide:} An administrator guide describes system configuration, user management, and content moderation procedures.
+    \item \textbf{Developer Documentation:} Technical documentation supports system maintenance, future enhancements, and integration with other institutional systems.
+\end{itemize}
+
+\subsection{Assumptions and Dependencies}
+It is assumed that users have access to stable internet connectivity and compatible digital devices.
+The platform depends on institutional support for adoption and faculty participation for content verification.
+Additionally, the effectiveness of the system relies on active user engagement and continuous content contribution.
+
+\section{External Interface Requirements}
+
+\subsection{User Interfaces}
+Users interact with Nexus Notes through modern web browsers.
+The interface is divided into role-based dashboards:
+\begin{itemize}
+    \item \textbf{Student Dashboard}
+    \item \textbf{Administrator Console}
+\end{itemize}
+
+\subsection{Hardware Interfaces}
+The platform supports cross-platform access via modern web browsers.
+
+\subsection{Software Interfaces}
+The platform requires a web server, database management system, and stable internet connectivity.
+It may integrate with institutional authentication systems and external tech APIs.
+
+\subsection{Communications Interfaces}
+Nexus Notes requires an active internet connection to function.
+
+\section{System Features}
+
+\subsection{Upload Academic Resource}
+
+\textbf{Description:} A student uploads academic materials such as lecture notes, project reports, or question papers to a subject repository for sharing.
+
+\textbf{Priority:} High
+
+\textbf{Main Flow:}
+\begin{itemize}
+    \item Student accesses the ``Contribute'' section.
+    \item Selects category and uploads file (PDF, DOCX, PPT).
+    \item Adds required metadata (Subject, Topic, Tags).
+    \item System validates and publishes the resource.
+\end{itemize}
+
+\textbf{Key Requirements:}
+\begin{itemize}
+    \item Student must be logged in with Contributor permissions.
+    \item Maximum file size is 50MB.
+    \item Resource is stored and indexed in the database.
+\end{itemize}
+
+
+\subsection{Search and Download Resource}
+
+\textbf{Description:} Students search academic materials using keywords or filters and download them for study.
+
+\textbf{Priority:} Medium
+
+\textbf{Main Flow:}
+\begin{itemize}
+    \item Student enters keywords or applies filters.
+    \item System displays ranked results.
+    \item Student downloads selected resource.
+\end{itemize}
+
+\textbf{Key Requirements:}
+\begin{itemize}
+    \item Student must be logged in.
+    \item Download count is updated.
+\end{itemize}
+
+
+\subsection{View Tech-Trend Feed}
+
+\textbf{Description:} Students view real-time technological updates related to their academic domains.
+
+\textbf{Priority:} Medium
+
+\textbf{Main Flow:}
+\begin{itemize}
+    \item Student accesses the Tech-Trend section.
+    \item System fetches and displays curated updates.
+\end{itemize}
+
+\textbf{Requirement:}
+\begin{itemize}
+    \item Active internet connection is required.
+\end{itemize}
+
+
+\subsection{Rate and Review Resource}
+
+\textbf{Description:} Students provide ratings and optional reviews for shared resources.
+
+\textbf{Priority:} Low
+
+\textbf{Main Flow:}
+\begin{itemize}
+    \item Student selects rating (1--5 stars).
+    \item Optional comment is submitted.
+    \item System updates the average rating.
+\end{itemize}
+
+\textbf{Requirement:}
+\begin{itemize}
+    \item Student must have accessed the resource.
+\end{itemize}
+
+
+\subsection{User Management}
+
+\textbf{Description:} Nexus Notes administrators manage user roles and permissions.
+
+\textbf{Priority:} High
+
+\textbf{Main Flow:}
+\begin{itemize}
+    \item Administrator accesses the User Management section.
+    \item Updates user roles or permissions.
+    \item System saves changes.
+\end{itemize}
+
+\textbf{Requirement:}
+\begin{itemize}
+    \item Administrator must be logged in with appropriate privileges.
+\end{itemize}
+
+
+\subsection{Content Moderation}
+
+\textbf{Description:} Nexus Notes administrators review and manage uploaded content.
+
+\textbf{Priority:} High
+
+\textbf{Main Flow:}
+\begin{itemize}
+    \item Administrator reviews flagged resources.
+    \item Deletes or approves content.
+    \item System updates content visibility.
+\end{itemize}
+
+\textbf{Requirement:}
+\begin{itemize}
+    \item Content must be flagged or under review.
+\end{itemize}
+
+\section{Other Nonfunctional Requirements}
+
+\subsection{Performance Requirements}
+The Nexus Notes platform shall operate efficiently under normal and peak usage conditions.
+
+\begin{itemize}
+    \item The system shall support concurrent access by multiple users without noticeable performance degradation.
+    \item Search results shall be displayed within 2--3 seconds under normal load.
+    \item File uploads up to 50MB shall be processed and validated efficiently.
+    \item The platform shall be scalable to accommodate increasing numbers of users and resources.
+    \item System availability shall remain high except during scheduled maintenance.
+\end{itemize}
+
+\subsection{Security and Privacy Constraints}
+The system shall ensure protection of user data and academic resources.
+
+\begin{itemize}
+    \item User authentication shall be required to access system features.
+    \item Role-based access control shall restrict actions based on user type (Student, Faculty, Administrator).
+    \item Passwords and sensitive data shall be securely stored.
+    \item Secure communication protocols shall be used for data transmission.
+    \item The system shall comply with institutional data protection policies.
+\end{itemize}
+
+\subsection{Software Quality Attributes}
+Nexus Notes shall follow standard software development practices to ensure reliability and maintainability.
+
+\begin{itemize}
+    \item The system shall provide a user-friendly and intuitive interface.
+    \item The platform shall support responsive design for different devices.
+    \item Periodic backups shall be maintained to prevent data loss.
+\end{itemize}
+\section{Other Requirements}
+
+\subsection{Applicable Standards}
+Database updates and backups ensure academic resources are securely managed.
+The system provides a mechanism for continuous updates of digital content.
+
+\end{document}
