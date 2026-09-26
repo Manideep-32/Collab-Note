@@ -1,4 +1,4 @@
-# Nexus Note
+# Collab Note
 
 This repository contains a Node/Express backend and a Vite React frontend.
 
